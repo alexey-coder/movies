@@ -42,11 +42,14 @@ extension DetailsPresenter : DetailsPresenterProtocol {
     }
     
     func viewDidLoad() {
+        view?.showLoading()
         view?.displayScreenTitle(title: self.movieName)
         apiService?.fetchMovieCredits(id: self.movieId, successHandler: { response in
             self.moviewCrew = response.crew
+            self.view?.hideLoading()
             self.view?.refreshDetailsView()
         }, errorHandler: { error in
+            self.view?.hideLoading()
             self.view?.displayMoviesRetrievalError(title: "Error", message: error.localizedDescription)
         })
     }

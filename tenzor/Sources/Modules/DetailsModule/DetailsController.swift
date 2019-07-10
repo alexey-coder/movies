@@ -22,7 +22,8 @@ class DetailsController: BaseController<DetailsView> {
         navigationItem.title = title
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: ColorService.textColor,
-            NSAttributedString.Key.font: FontsService.Bold.of(size: 20)!]
+            NSAttributedString.Key.font: FontsService.Bold.of(size: 20)!
+        ]
     }
 }
 
@@ -42,6 +43,20 @@ extension DetailsController: UITableViewDataSource {
 extension DetailsController: UITableViewDelegate {}
 
 extension DetailsController: DetailsViewProtocol {
+    func showLoading() {
+        DispatchQueue.main.async {
+            self.ui.detailTable.isHidden = true
+            self.ui.activityIndicator.startAnimating()
+        }
+    }
+    
+    func hideLoading() {
+        DispatchQueue.main.async {
+            self.ui.detailTable.isHidden = false
+            self.ui.activityIndicator.stopAnimating()
+        }
+    }
+    
     func displayMoviesRetrievalError(title: String, message: String) {
         DispatchQueue.main.async {
             self.showAlertMessageWithTitle(title: title, message: message)

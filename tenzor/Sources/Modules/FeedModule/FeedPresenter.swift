@@ -27,10 +27,13 @@ class FeedPresenter: FeedPresenterProtocol {
     }
     
     func viewDidLoad() {
+        view?.showLoading()
         apiService?.fetchMovies(from: .topRated, params: nil, successHandler: { response in
             self.movies = response.results
+            self.view?.hideLoading()
             self.view?.refreshMoviesView()
         }, errorHandler: { error in
+            self.view?.hideLoading()
             self.view?.displayMoviesRetrievalError(title: "Error", message: error.localizedDescription)
         })
     }

@@ -11,4 +11,6 @@ import Foundation
 protocol FeedViewProtocol: class {
     func refreshMoviesView()
     func displayMoviesRetrievalError(title: String, message: String)
+    func showLoading()
+    func hideLoading()
 }

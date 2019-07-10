@@ -13,4 +13,6 @@ protocol DetailsViewProtocol: class {
     func closePressed()
     func refreshDetailsView()
     func displayMoviesRetrievalError(title: String, message: String)
+    func showLoading()
+    func hideLoading()
 }

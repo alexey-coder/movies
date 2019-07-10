@@ -10,6 +10,14 @@ import UIKit
 
 class DetailsView: UIView {
     
+    let activityIndicator: UIActivityIndicatorView = {
+        let ai = UIActivityIndicatorView()
+        ai.translatesAutoresizingMaskIntoConstraints = false
+        ai.style = .gray
+        ai.hidesWhenStopped = true
+        return ai
+    }()
+    
     let detailTable: UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
@@ -24,8 +32,12 @@ class DetailsView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = ColorService.backgroundColor
-        addSubview(detailTable)
+        [activityIndicator, detailTable].forEach { addSubview($0) }
         NSLayoutConstraint.activate([
+            activityIndicator.widthAnchor.constraint(equalToConstant: 40),
+            activityIndicator.heightAnchor.constraint(equalToConstant: 40),
+            activityIndicator.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             detailTable.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
             detailTable.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
             detailTable.leadingAnchor.constraint(equalTo: self.leadingAnchor),

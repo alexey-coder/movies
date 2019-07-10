@@ -23,11 +23,26 @@ class FeedController: BaseController<FeedView> {
         navigationItem.title = "Feed"
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: ColorService.textColor,
-            NSAttributedString.Key.font: FontsService.Bold.of(size: 20)!]
+            NSAttributedString.Key.font: FontsService.Bold.of(size: 20)!
+        ]
     }
 }
 
-extension FeedController: FeedViewProtocol {    
+extension FeedController: FeedViewProtocol {
+    func showLoading() {
+        DispatchQueue.main.async {
+            self.ui.tableFeed.isHidden = true
+            self.ui.activityIndicator.startAnimating()
+        }
+    }
+    
+    func hideLoading() {
+        DispatchQueue.main.async {
+            self.ui.tableFeed.isHidden = false
+            self.ui.activityIndicator.stopAnimating()
+        }
+    }
+    
     
     func refreshMoviesView() {
         DispatchQueue.main.async {
