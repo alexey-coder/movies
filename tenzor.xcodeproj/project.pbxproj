@@ -34,7 +34,6 @@
 		CE22A0E922D4B2A000DE4C83 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22A0E822D4B2A000DE4C83 /* ApiService.swift */; };
 		CE22A0EB22D4B2C800DE4C83 /* MoviesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22A0EA22D4B2C800DE4C83 /* MoviesResponseModel.swift */; };
 		CE22A0ED22D4B4F700DE4C83 /* FeedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22A0EC22D4B4F700DE4C83 /* FeedTableCell.swift */; };
-		CE22A0EF22D4B85B00DE4C83 /* FeedConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22A0EE22D4B85B00DE4C83 /* FeedConfigurator.swift */; };
 		CE22A0F222D4B95300DE4C83 /* FeedPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22A0F122D4B95300DE4C83 /* FeedPresenterProtocol.swift */; };
 		CE22A0F422D4B9D700DE4C83 /* FeedViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22A0F322D4B9D700DE4C83 /* FeedViewProtocol.swift */; };
 		CE22A0F822D4BA8100DE4C83 /* FeedTableCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22A0F722D4BA8100DE4C83 /* FeedTableCellProtocol.swift */; };
@@ -46,7 +45,6 @@
 		CE22A10922D4D43700DE4C83 /* DetailsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22A10822D4D43700DE4C83 /* DetailsPresenterProtocol.swift */; };
 		CE22A10B22D4D4E300DE4C83 /* DetailsRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22A10A22D4D4E300DE4C83 /* DetailsRouterProtocol.swift */; };
 		CE22A10D22D4D6CE00DE4C83 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22A10C22D4D6CE00DE4C83 /* Alerts.swift */; };
-		CE22A10F22D4DA8300DE4C83 /* DetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22A10E22D4DA8300DE4C83 /* DetailsConfigurator.swift */; };
 		CE22A11122D4DB1900DE4C83 /* DeailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22A11022D4DB1900DE4C83 /* DeailsView.swift */; };
 		CE22A11322D4DB4D00DE4C83 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22A11222D4DB4D00DE4C83 /* DetailsPresenter.swift */; };
 		CE22A11522D4DB7800DE4C83 /* DetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22A11422D4DB7800DE4C83 /* DetailsController.swift */; };
@@ -89,7 +87,6 @@
 		CE22A0E822D4B2A000DE4C83 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		CE22A0EA22D4B2C800DE4C83 /* MoviesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesResponseModel.swift; sourceTree = "<group>"; };
 		CE22A0EC22D4B4F700DE4C83 /* FeedTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableCell.swift; sourceTree = "<group>"; };
-		CE22A0EE22D4B85B00DE4C83 /* FeedConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedConfigurator.swift; sourceTree = "<group>"; };
 		CE22A0F122D4B95300DE4C83 /* FeedPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterProtocol.swift; sourceTree = "<group>"; };
 		CE22A0F322D4B9D700DE4C83 /* FeedViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewProtocol.swift; sourceTree = "<group>"; };
 		CE22A0F722D4BA8100DE4C83 /* FeedTableCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableCellProtocol.swift; sourceTree = "<group>"; };
@@ -101,7 +98,6 @@
 		CE22A10822D4D43700DE4C83 /* DetailsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenterProtocol.swift; sourceTree = "<group>"; };
 		CE22A10A22D4D4E300DE4C83 /* DetailsRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouterProtocol.swift; sourceTree = "<group>"; };
 		CE22A10C22D4D6CE00DE4C83 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
-		CE22A10E22D4DA8300DE4C83 /* DetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsConfigurator.swift; sourceTree = "<group>"; };
 		CE22A11022D4DB1900DE4C83 /* DeailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeailsView.swift; sourceTree = "<group>"; };
 		CE22A11222D4DB4D00DE4C83 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 		CE22A11422D4DB7800DE4C83 /* DetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsController.swift; sourceTree = "<group>"; };
@@ -205,7 +201,6 @@
 				CE22A0BA22D4AFCA00DE4C83 /* FeedView.swift */,
 				CE22A0BC22D4AFE100DE4C83 /* FeedPresenter.swift */,
 				CE22A0BE22D4AFF400DE4C83 /* FeedController.swift */,
-				CE22A0EE22D4B85B00DE4C83 /* FeedConfigurator.swift */,
 				CE22A0FB22D4BF7000DE4C83 /* FeedRouter.swift */,
 			);
 			path = FeedModule;
@@ -224,7 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				CE22A10522D4D3ED00DE4C83 /* Interfaces */,
-				CE22A10E22D4DA8300DE4C83 /* DetailsConfigurator.swift */,
 				CE22A11022D4DB1900DE4C83 /* DeailsView.swift */,
 				CE22A11222D4DB4D00DE4C83 /* DetailsPresenter.swift */,
 				CE22A11422D4DB7800DE4C83 /* DetailsController.swift */,
@@ -445,7 +439,6 @@
 				CE22A11522D4DB7800DE4C83 /* DetailsController.swift in Sources */,
 				CE22A11D22D52D5300DE4C83 /* CrewTableCellProtocol.swift in Sources */,
 				CE22A0EB22D4B2C800DE4C83 /* MoviesResponseModel.swift in Sources */,
-				CE22A10F22D4DA8300DE4C83 /* DetailsConfigurator.swift in Sources */,
 				CE22A11B22D52D0E00DE4C83 /* CrewTableCell.swift in Sources */,
 				CE22A10922D4D43700DE4C83 /* DetailsPresenterProtocol.swift in Sources */,
 				CE22A0C522D4B07400DE4C83 /* Reusable.swift in Sources */,
@@ -470,7 +463,6 @@
 				CE22A0BF22D4AFF400DE4C83 /* FeedController.swift in Sources */,
 				CE22A0FC22D4BF7000DE4C83 /* FeedRouter.swift in Sources */,
 				CE22A0F422D4B9D700DE4C83 /* FeedViewProtocol.swift in Sources */,
-				CE22A0EF22D4B85B00DE4C83 /* FeedConfigurator.swift in Sources */,
 				CE22A12522D5A64D00DE4C83 /* Color.swift in Sources */,
 				CE22A0ED22D4B4F700DE4C83 /* FeedTableCell.swift in Sources */,
 				CE22A0F222D4B95300DE4C83 /* FeedPresenterProtocol.swift in Sources */,

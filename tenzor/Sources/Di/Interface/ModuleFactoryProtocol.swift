@@ -10,5 +10,5 @@ import Foundation
 
 protocol ModuleFactoryProtocol {
     func makeFeedModule() -> FeedController
-    func makeDetailModule(movieId: Int) -> DetailsController
+    func makeDetailModule(movieId: Int, movieName: String) -> DetailsController
 }

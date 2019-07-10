@@ -9,6 +9,14 @@
 import UIKit
 
 class FeedView: UIView {
+    
+    let activityIndicator: UIActivityIndicatorView = {
+        let ai = UIActivityIndicatorView()
+        ai.translatesAutoresizingMaskIntoConstraints = false
+        ai.style = .gray
+        ai.hidesWhenStopped = true
+        return ai
+    }()
 
     let tableFeed: UITableView = {
         let table = UITableView()
@@ -24,8 +32,12 @@ class FeedView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = ColorService.backgroundColor
-        addSubview(tableFeed)
+        [activityIndicator, tableFeed].forEach { addSubview($0) }
         NSLayoutConstraint.activate([
+            activityIndicator.widthAnchor.constraint(equalToConstant: 40),
+            activityIndicator.heightAnchor.constraint(equalToConstant: 40),
+            activityIndicator.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             tableFeed.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
             tableFeed.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
             tableFeed.leadingAnchor.constraint(equalTo: self.leadingAnchor),

@@ -17,6 +17,13 @@ class DetailsController: BaseController<DetailsView> {
         ui.detailTable.delegate = self
         ui.detailTable.dataSource = self
     }
+    
+    func setupNavBar(title: String) {
+        navigationItem.title = title
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: ColorService.textColor,
+            NSAttributedString.Key.font: FontsService.Bold.of(size: 20)!]
+    }
 }
 
 extension DetailsController: UITableViewDataSource {
@@ -52,6 +59,6 @@ extension DetailsController: DetailsViewProtocol {
     }
     
     func displayScreenTitle(title: String) {
-        
+        setupNavBar(title: title)
     }
 }

@@ -22,10 +22,10 @@ extension ModuleDependencyContainer: ModuleFactoryProtocol {
         return feedController
     }
     
-     func makeDetailModule(movieId: Int) -> DetailsController {
+    func makeDetailModule(movieId: Int, movieName: String) -> DetailsController {
         let detailController = DetailsController()
         let router = DetailsRouter(moduleFactory: self)
-        let presenter = DetailsPresenter(view: detailController, movieId: movieId, router: router, apiService: self.apiService)
+        let presenter = DetailsPresenter(view: detailController, movieId: movieId, movieName: movieName, router: router, apiService: self.apiService)
         detailController.presenter = presenter
         return detailController
     }

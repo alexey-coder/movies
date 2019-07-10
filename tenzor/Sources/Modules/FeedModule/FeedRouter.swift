@@ -21,7 +21,7 @@ class FeedRouter: FeedRouterProtocol {
     
     func presentDetailsView(for movie: MovieModel) {
         self.movie = movie
-        let detailsController = moduleFactory.makeDetailModule(movieId: movie.id)
+        let detailsController = moduleFactory.makeDetailModule(movieId: movie.id, movieName: movie.title)
         feedController?.navigationController?.pushViewController(detailsController, animated: true)
     }
 }

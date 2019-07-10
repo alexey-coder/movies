@@ -72,6 +72,18 @@ class FeedTableCell: UITableViewCell {
             ])
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        movieImage.image = nil
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        movieImage.layer.masksToBounds = false
+        movieImage.layer.cornerRadius = movieImage.frame.size.width / 2
+        movieImage.clipsToBounds = true
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -83,7 +95,7 @@ extension FeedTableCell: FeedTableCellProtocol {
     }
     
     func display(image: URL) {
-        movieImage.downloadImageFrom(url: image, imageMode: .scaleAspectFit)
+        movieImage.downloadImageFrom(url: image, imageMode: .scaleAspectFill)
     }
     
     func display(rate: String) {

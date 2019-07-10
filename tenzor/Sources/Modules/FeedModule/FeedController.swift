@@ -16,10 +16,18 @@ class FeedController: BaseController<FeedView> {
         presenter.viewDidLoad()
         ui.tableFeed.dataSource = self
         ui.tableFeed.delegate = self
+        setupNavBar()
+    }
+    
+    func setupNavBar() {
+        navigationItem.title = "Feed"
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: ColorService.textColor,
+            NSAttributedString.Key.font: FontsService.Bold.of(size: 20)!]
     }
 }
 
-extension FeedController: FeedViewProtocol {
+extension FeedController: FeedViewProtocol {    
     
     func refreshMoviesView() {
         DispatchQueue.main.async {
@@ -44,7 +52,7 @@ extension FeedController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.numberOfMovies
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: FeedTableCell = tableView.dequeueReusableCell(for: indexPath)
         presenter.configure(cell: cell, forRow: indexPath.row)
